@@ -26,23 +26,6 @@ public abstract class KitchenRecipeMachineSimple extends KitchenObject {
         super(itemGroup, item, recipeType, recipe, displayGroupFunction);
     }
 
-    public void trySetTop(@Nonnull Location location, @Nonnull ItemStack itemStack) {
-        if (itemStack.getType().isBlock() && itemStack.getType().isOccluding()) {
-            DisplayGroup displayGroup = getDisplayGroup(location);
-            if (displayGroup == null) {
-                return;
-            }
-            Display display = displayGroup.getDisplays().get("counter_top");
-            if (display instanceof ItemDisplay itemDisplay) {
-                itemDisplay.setItemStack(itemStack.clone());
-            }
-        }
-    }
-
-    public void setUUID(@Nonnull DisplayGroup displayGroup, @Nonnull Location location) {
-        BlockStorage.addBlockInfo(location, KEY_UUID, displayGroup.getParentUUID().toString());
-    }
-
     public void addRecipe(@Nonnull String input, @Nonnull ItemStack output) {
         getRecipes().put(input, output);
     }

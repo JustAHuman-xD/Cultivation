@@ -31,24 +31,6 @@ public class NothingPlant extends CultivationPlant {
     }
 
     @Override
-    public void updateGrowthStage(@Nonnull Block block, int growthStage) {
-        // todo Fuck numbers
-        if (growthStage == 0) {
-            PlantTheme theme = growth.getTheme();
-            if (theme != null) {
-                PlayerHead.setSkin(block, theme.getSeed().getPlayerSkin(), false);
-                PaperLib.getBlockState(block, false).getState().update(true, false);
-                BlockStorage.addBlockInfo(block, Keys.FLORA_GROWTH_STAGE, String.valueOf(growthStage));
-                growthDisplay(block.getLocation());
-            }
-        } else if (growthStage == 1) {
-            addDisplayPlant(block.getLocation());
-            block.setType(Material.AIR);
-        }
-        BlockStorage.addBlockInfo(block, Keys.FLORA_GROWTH_STAGE, String.valueOf(growthStage));
-    }
-
-    @Override
     protected boolean validateFlora() {
         return true;
     }

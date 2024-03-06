@@ -4,7 +4,6 @@ import dev.sefiraat.cultivation.implementation.slimefun.items.Machines;
 import dev.sefiraat.sefilib.entity.display.DisplayGroup;
 import dev.sefiraat.sefilib.string.Theme;
 import io.github.bakedlibs.dough.items.CustomItemStack;
-import io.github.thebusybiscuit.slimefun4.api.events.PlayerRightClickEvent;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
@@ -14,7 +13,6 @@ import io.github.thebusybiscuit.slimefun4.core.networks.energy.EnergyNetComponen
 import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.protection.Interaction;
 import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils;
-import me.mrCookieSlime.Slimefun.api.BlockStorage;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenuPreset;
 import me.mrCookieSlime.Slimefun.api.item_transport.ItemTransportFlow;
@@ -56,27 +54,6 @@ public class PoweredKitchenMachineSimple extends KitchenRecipeMachineSimple impl
     ) {
         super(itemGroup, item, recipeType, recipe, displayGroupFunction);
         this.powerRequirement = powerRequirement;
-    }
-
-    @Override
-    protected void onRightClick(@NotNull PlayerRightClickEvent event) {
-        Player player = event.getPlayer();
-        if (player.isSneaking()) {
-            super.onRightClick(event);
-        } else {
-            Block block = event.getClickedBlock().orElse(null);
-
-            if (block == null) {
-                return;
-            }
-
-            BlockMenu blockMenu = BlockStorage.getInventory(block);
-
-            if (blockMenu == null || !blockMenu.canOpen(block, player)) {
-                return;
-            }
-            blockMenu.open(player);
-        }
     }
 
     @Nonnull
@@ -155,9 +132,7 @@ public class PoweredKitchenMachineSimple extends KitchenRecipeMachineSimple impl
 
             @Override
             public boolean canOpen(@Nonnull Block block, @Nonnull Player player) {
-                return Machines.GARDEN_CLOCHE.canUse(player, false)
-                    && Slimefun.getProtectionManager()
-                    .hasPermission(player, block.getLocation(), Interaction.INTERACT_BLOCK);
+                return false;
             }
 
             @Override

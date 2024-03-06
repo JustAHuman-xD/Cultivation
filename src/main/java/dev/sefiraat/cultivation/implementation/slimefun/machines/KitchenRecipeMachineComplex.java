@@ -6,8 +6,6 @@ import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
 import org.bukkit.Location;
-import org.bukkit.entity.Display;
-import org.bukkit.entity.ItemDisplay;
 import org.bukkit.inventory.ItemStack;
 
 import javax.annotation.Nonnull;
@@ -24,19 +22,6 @@ public abstract class KitchenRecipeMachineComplex extends KitchenObject {
                                           Function<Location, DisplayGroup> displayGroupFunction
     ) {
         super(itemGroup, item, recipeType, recipe, displayGroupFunction);
-    }
-
-    public void trySetTop(@Nonnull Location location, @Nonnull ItemStack itemStack) {
-        if (itemStack.getType().isBlock() && itemStack.getType().isOccluding()) {
-            DisplayGroup displayGroup = getDisplayGroup(location);
-            if (displayGroup == null) {
-                return;
-            }
-            Display display = displayGroup.getDisplays().get("counter_top");
-            if (display instanceof ItemDisplay itemDisplay) {
-                itemDisplay.setItemStack(itemStack.clone());
-            }
-        }
     }
 
     public void addRecipe(@Nonnull ItemStack[] inputs, @Nonnull ItemStack output) {

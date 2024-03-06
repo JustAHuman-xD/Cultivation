@@ -29,7 +29,7 @@ public class Food extends SimpleSlimefunItem<ItemUseHandler> {
                 ItemStack[] recipe,
                 Consumer<Player> effect
     ) {
-        super(CultivationGroups.FOODS, item, recipeType, recipe);
+        super(CultivationGroups.HIDDEN_CONTENT, item, recipeType, recipe);
         this.eatingEffects = effect;
     }
 

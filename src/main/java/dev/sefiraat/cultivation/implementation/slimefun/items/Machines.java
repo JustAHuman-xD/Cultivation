@@ -22,7 +22,7 @@ public final class Machines {
     }
 
     public static final GardenCloche GARDEN_CLOCHE = new GardenCloche(
-        CultivationGroups.MACHINES,
+        CultivationGroups.HIDDEN_CONTENT,
         CultivationStacks.GARDEN_CLOCHE,
         RecipeType.ENHANCED_CRAFTING_TABLE,
         new ItemStack[]{
@@ -33,7 +33,7 @@ public final class Machines {
     );
 
     public static final DoNothingKitchenObject COUNTER_NOTHING = new DoNothingKitchenObject(
-        CultivationGroups.MACHINES,
+        CultivationGroups.HIDDEN_CONTENT,
         CultivationStacks.COUNTER_NOTHING,
         RecipeType.ENHANCED_CRAFTING_TABLE,
         new ItemStack[]{
@@ -45,7 +45,7 @@ public final class Machines {
     );
 
     public static final RightClickKitchenMachine COUNTER_CHOPPING = new RightClickKitchenMachine(
-        CultivationGroups.MACHINES,
+        CultivationGroups.HIDDEN_CONTENT,
         CultivationStacks.COUNTER_CHOPPING,
         RecipeType.ENHANCED_CRAFTING_TABLE,
         new ItemStack[]{
@@ -57,7 +57,7 @@ public final class Machines {
     );
 
     public static final RightClickKitchenMachine COUNTER_SLICING = new RightClickKitchenMachine(
-        CultivationGroups.MACHINES,
+        CultivationGroups.HIDDEN_CONTENT,
         CultivationStacks.COUNTER_SLICING,
         RecipeType.ENHANCED_CRAFTING_TABLE,
         new ItemStack[]{
@@ -69,7 +69,7 @@ public final class Machines {
     );
 
     public static final RightClickKitchenMachine COUNTER_MASHER = new RightClickKitchenMachine(
-        CultivationGroups.MACHINES,
+        CultivationGroups.HIDDEN_CONTENT,
         CultivationStacks.COUNTER_MASHER,
         RecipeType.ENHANCED_CRAFTING_TABLE,
         new ItemStack[]{
@@ -81,7 +81,7 @@ public final class Machines {
     );
 
     public static final RightClickKitchenMachine COUNTER_GRINDER = new RightClickKitchenMachine(
-        CultivationGroups.MACHINES,
+        CultivationGroups.HIDDEN_CONTENT,
         CultivationStacks.COUNTER_GRINDER,
         RecipeType.ENHANCED_CRAFTING_TABLE,
         new ItemStack[]{
@@ -93,7 +93,7 @@ public final class Machines {
     );
 
     public static final RightClickKitchenMachine COUNTER_BLENDER = new RightClickKitchenMachine(
-        CultivationGroups.MACHINES,
+        CultivationGroups.HIDDEN_CONTENT,
         CultivationStacks.COUNTER_BLENDER,
         RecipeType.ENHANCED_CRAFTING_TABLE,
         new ItemStack[]{
@@ -105,7 +105,7 @@ public final class Machines {
     );
 
     public static final RightClickKitchenMachine COUNTER_BOILING = new RightClickKitchenMachine(
-        CultivationGroups.MACHINES,
+        CultivationGroups.HIDDEN_CONTENT,
         CultivationStacks.COUNTER_BOILING,
         RecipeType.ENHANCED_CRAFTING_TABLE,
         new ItemStack[]{
@@ -117,7 +117,7 @@ public final class Machines {
     );
 
     public static final PoweredKitchenMachineComplex COUNTER_OVEN = new PoweredKitchenMachineComplex(
-        CultivationGroups.MACHINES,
+        CultivationGroups.HIDDEN_CONTENT,
         CultivationStacks.COUNTER_OVEN,
         RecipeType.ENHANCED_CRAFTING_TABLE,
         new ItemStack[]{
@@ -130,7 +130,7 @@ public final class Machines {
     );
 
     public static final PoweredKitchenMachineSimple COUNTER_FRYER = new PoweredKitchenMachineSimple(
-        CultivationGroups.MACHINES,
+        CultivationGroups.HIDDEN_CONTENT,
         CultivationStacks.COUNTER_FRYER,
         RecipeType.ENHANCED_CRAFTING_TABLE,
         new ItemStack[]{
@@ -143,7 +143,7 @@ public final class Machines {
     );
 
     public static final PoweredKitchenMachineSimple COUNTER_GRILL = new PoweredKitchenMachineSimple(
-        CultivationGroups.MACHINES,
+        CultivationGroups.HIDDEN_CONTENT,
         CultivationStacks.COUNTER_GRILL,
         RecipeType.ENHANCED_CRAFTING_TABLE,
         new ItemStack[]{
@@ -156,7 +156,7 @@ public final class Machines {
     );
 
     public static final CraftingKitchenMachine COUNTER_FINISHING = new CraftingKitchenMachine(
-        CultivationGroups.MACHINES,
+        CultivationGroups.HIDDEN_CONTENT,
         CultivationStacks.COUNTER_FINISHING,
         RecipeType.ENHANCED_CRAFTING_TABLE,
         new ItemStack[]{

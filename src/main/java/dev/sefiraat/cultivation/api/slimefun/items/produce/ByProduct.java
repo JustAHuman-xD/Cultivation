@@ -10,14 +10,14 @@ import org.bukkit.inventory.ItemStack;
 
 public class ByProduct extends UnplaceableBlock {
     public ByProduct(SlimefunItemStack item, RecipeType recipeType, ItemStack input) {
-        super(CultivationGroups.BY_PRODUCTS, item, recipeType, new ItemStack[]{
+        super(CultivationGroups.HIDDEN_CONTENT, item, recipeType, new ItemStack[]{
             null, null, null,
             null, input, null,
             null, null, null
         });
     }
     public ByProduct(SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
-        super(CultivationGroups.BY_PRODUCTS, item, recipeType, recipe);
+        super(CultivationGroups.HIDDEN_CONTENT, item, recipeType, recipe);
     }
 
     public ByProduct buildRegister(SlimefunAddon addon) {

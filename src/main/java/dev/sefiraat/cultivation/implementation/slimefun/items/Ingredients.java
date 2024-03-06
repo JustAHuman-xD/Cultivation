@@ -119,7 +119,7 @@ public final class Ingredients {
     ).buildRegister(Cultivation.getInstance());
 
     public static final ProduceCore PEPPERONI = new ProduceCore(
-        CultivationGroups.BY_PRODUCTS,
+        CultivationGroups.HIDDEN_CONTENT,
         CultivationStacks.PEPPERONI,
         RecipeTypes.FINISHING,
         new ItemStack[]{
