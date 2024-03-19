@@ -21,11 +21,7 @@ public class ListenerManager {
     public ListenerManager() {
         Preconditions.checkArgument(instance == null, "Cannot create a new instance of the ListenerManager");
         instance = this;
-        addListener(new CustomDropListener());
         addListener(new CustomPlacementListener());
-        addListener(new MobDropListener());
-        addListener(new TreeListener());
-        addListener(new TraderListener());
     }
 
     private void addListener(@Nonnull Listener listener) {
